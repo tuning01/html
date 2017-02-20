@@ -1,0 +1,186 @@
+﻿  html, body { height: 100%;
+  background-color: black;
+  }
+  body { position:relative; margin: 0; padding: 0; font: 12px/100% 'Acme', sans-serif;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "ƒƒCƒŠƒI", Meiryo, "‚l‚r ‚oƒSƒVƒbƒN", "MS PGothic", sans-serif;
+  }
+  *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
+
+  h1 {line-height: 1; margin: 0 0 120px; font-size: 580%; font-family: 'Open Sans', sans-serif; letter-spacing: -2px;}
+  h2 {line-height: 1; margin: 0 0 120px; font-size: 380%; font-family: 'Open Sans', sans-serif; letter-spacing: -2px;}
+
+  .section1 p{
+    line-height: 1; margin:30px auto; width:auto;
+  }
+  p{line-height: 1; font-size: 180%; width:auto; padding-top: 30px;}
+
+  a, a:visited { color: #fff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .cover { position: relative; width: 100%; margin: 0; padding: 0; color: #fff; }
+
+  .centerBox {display:block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 50%; min-width: 180px; height:50%; text-align: center; }
+  .centerBox *{ display: block; margin: auto; position: relative;}
+  .section1 {   height: 100vh; width: 100vw;  background: url(image/tune-top.jpg) no-repeat fixed; background-size: 100% 100%; background-position: 50% 50%;}
+  .section2 {  height: 100vh; width: 100vw;  background: #fff; color: #009688; }
+  .section3 {  height: 150vh; width: 100vw;  background: url(image/tune1.jpg) no-repeat fixed bottom center; background-size: cover; background-position: 50% 50%;}
+  .section4 {  height: 100vh; width: 100vw;  background: #009688; }
+  .section5 {  height: 100vh; width: 100vw;  background: url(image/tune2.jpg) no-repeat fixed; background-size: cover; background-position: 50% 50%;}
+
+  #menu-wrap { position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; background: rgba(0,0,0,1); font-family: 'Open Sans', sans-serif; transition: .3s }
+  #menu { list-style-type: none; width: 960px; margin: 0px auto 0px; padding: 0; }
+  #menu li { width: 16%; float: left; margin: 0; padding: 0; text-align: center; }
+  #menu li a { display: block; width : 100%; padding: 20px 0; color: #fff; font-size: 20px; line-height: 1; text-decoration: none; transition: .3s; }
+  #menu li a:hover { background: rgba(0,200,0,.3); }
+
+  a.btn{
+    display: inline-block;
+    width: 180px;
+    margin: 10px 0;
+    padding: 16px 20px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+  }
+  a.sample15 {
+    position:relative;
+    z-index:2;
+    overflow:hidden
+  }
+  a.sample15::after {
+    display:block;
+    content:"";
+    position:absolute;
+    z-index:-1;
+    top:50%;
+    left:50%;
+    width:160px;
+    height:160px;
+    margin:-80px 0 0 -80px;
+    border:80px double rgba(255,255,255,0);
+    border-radius:50%
+  }
+  a.sample15:hover::after {
+    border-width:0;
+    border-color:rgba(255,255,255,1);
+    transition:.5s
+}
+
+footer{
+  padding: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+
+#navToggle {
+    display:none;
+    position:absolute;
+    right:13px;
+    top:13px;
+    width:30px;
+    height:25px;
+    cursor:pointer
+  }
+#navToggle div {
+  position:relative
+}
+#navToggle span {
+    display:block;
+    position:absolute; /*#navToggle div に対して*/
+    width:100%;
+    border-bottom:solid 3px #999;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out
+  }
+#navToggle span:nth-child(1) {top:0}
+#navToggle span:nth-child(2) {top:11px}
+#navToggle span:nth-child(3) {top:22px}
+
+/* Toggle(Button) */
+.openNav #navToggle span:nth-child(1) {
+    top: 11px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+  }
+.openNav #navToggle span:nth-child(2),
+.openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg)
+  }
+
+
+/*header menu*/
+　/*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
+
+.openNav nav {
+    -moz-transform: translateY(351px);
+    -webkit-transform: translateY(351px);
+    transform: translateY(351px)
+  }
+  header{
+    height:60px;
+  }
+
+  @media screen and (max-width: 940px) {
+
+  h2 {
+      font-size : 105% ;
+      margin : 1em 0 0.8em 0 ;
+    }
+      p {
+      width:auto;
+      font-size : 95%;
+      margin : 0 0 1.8em 0;
+      line-height : 1;
+    }
+    #navToggle {
+      display:block;
+      z-index: 10000;
+    }
+    #menu{
+      position: absolute;
+      right: 0;
+    }
+    #menu-wrap{
+      position: fixed;
+    }
+    #menu{
+      z-index: inherit;
+      display: none;
+      width:260px;
+      height:360px;
+      transform: translateX(200px);
+      background-color: rgba(0,0,0,0.3);
+    }
+    #menu li{
+      z-index:inherit;
+      clear: left;
+      margin:0 auto;
+      width: inherit;
+    }
+    #menu.active{
+      display:block;
+      animation: slide .3s ease 0s 1 both;
+    }
+    @keyframes slide{
+      0%{
+        display: none;
+      }
+      1%{
+        display: block;
+      }
+      100%{
+        transform: translateX(0px);
+      }
+    }
+  }
